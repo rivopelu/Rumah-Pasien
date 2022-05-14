@@ -1,0 +1,132 @@
+.navbarComp {
+
+    .garisTengahNavbar {
+        display: flex;
+        height: 20px;
+        background-color: #d4e6aa;
+        width: 2px;
+    }
+
+    #navMenu {
+        cursor: pointer;
+        display: none;
+    }
+
+
+    // MOBILE VIEW
+
+
+    @media only screen and (max-width: 900px) {
+        #navMenu {
+            display: block;
+        }
+
+        .garisTengahNavbar {
+            display: none;
+        }
+
+        .kanan {
+            // background-color: red;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            background: #E7EFEE;
+
+            width: 100vw;
+            // z-index: -1;
+            transform: translateX(-100vw);
+            transition: .2s;
+            // justify-content: space-between;
+
+            .navlist {
+                padding-top: 50px;
+
+                .active {
+                    background: linear-gradient(92.74deg,  #212bb8  4.23%,#14a0b2 96.01%);
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+
+
+
+            a {
+                // background-color: red;
+                display: flex;
+                padding: 10px 20px;
+            }
+
+            .login-register {
+                border-top: 1px solid gray;
+                padding-top: 10px;
+                align-items: center;
+
+                // padding-bottom: 10px;
+                // background-color: rebeccapurple;
+                a {
+                    padding: 0;
+                }
+
+                .masuk {
+                    margin-left: 20px;
+
+                }
+
+            }
+
+        }
+
+
+        .kanan-active {
+            transform: translateX(0);
+            transition: .2s;
+        }
+    }
+
+
+    #navMenu>span {
+        display: block;
+        width: 28px;
+        height: 2px;
+        border-radius: 9999px;
+        background: linear-gradient(92.74deg, #14a0b2 4.23%, #212bb8 96.01%);
+    }
+
+    #navMenu>span:not(:last-child) {
+        margin-bottom: 7px;
+    }
+
+    #navMenu,
+    #navMenu>span {
+        transition: all 0.4s ease-in-out;
+    }
+
+    #navMenu.active {
+        transition-delay: 0.8s;
+        transform: rotate(45deg);
+    }
+
+    #navMenu.active>span:nth-child(2) {
+        width: 0;
+    }
+
+    #navMenu.active>span:nth-child(1),
+    #navMenu.active>span:nth-child(3) {
+        transition-delay: 0.4s;
+    }
+
+    #navMenu.active>span:nth-child(1) {
+        transform: translateY(9px);
+    }
+
+    #navMenu.active>span:nth-child(3) {
+        transform: translateY(-9px) rotate(90deg);
+    }
+
+    .navlist .active {
+        color: #216fb8;
+    }
+}

@@ -18,7 +18,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(202, 105, 35);
+  background: #21B878;
   border-radius: 5px;
   transition: .2s;
 }
@@ -33,14 +33,7 @@ html.light {
 
 }
 
-html.dark {
 
-  ::-webkit-scrollbar-track {
-    background: rgb(21, 27, 36);
-  }
-
-
-}
 
 html,
 body {
@@ -48,16 +41,35 @@ body {
   overflow-x: hidden;
 }
 
+
+
+
+
+
+
+
 .containerMain {
-  padding: 0 100px;
+  padding: 0 20px;
+  // background-color: red;
 }
 
 
-
-
-
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 500px) {
   .containerMain {
-    padding: 0 20px;
+    padding: 0 200px;
   }
 }
+
+@media only screen and (min-width: 1000px) {
+  .containerMain {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (min-width: 1900px) {
+  .containerMain {
+    padding: 0 300px;
+
+  }
+}
+

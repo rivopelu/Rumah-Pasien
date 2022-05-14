@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { NavbarComp } from "../components";
+import HomePage from "./Home/HomePage";
+import LayananPage from "./layanan/LayananPage";
 
 const Main = () => {
     return (
-        <div>Main Page</div>
-    )
-}
+        <>
+            <NavbarComp />
+            <div className="pt-14 lg:pt-[70px]">
 
-export default Main
+                <Routes>
+                    <Route path={'/'} element={<HomePage />} />
+                    <Route path={`*`} element={<LayananPage />} />
+                </Routes>
+
+            </div>
+        </>
+    );
+};
+
+export default Main;

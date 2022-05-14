@@ -9,7 +9,7 @@ const MainRoute = () => {
             <Route path='/hello' element={<Hello />} />
             <Route path='/login' element={<Login/>}/>
             <Route path='/register' element={<RegisterPage/>}/>
-            <Route path='/' element={<Main />} />
+            <Route path='*' element={<Main />} />
         </Routes>
     )
 }
